@@ -1,0 +1,15 @@
+<a href="/"> Home </a>
+
+<h1>Celebrities </h1>
+<br>
+
+<div>
+
+{{#each artists }}
+     <h2> <a href='/celebrities/{{this.name}}'>{{this.name}}</a></h2> 
+        <h3> Ocupation: </h3>
+            <p> {{this.occupation}} </p>
+        <h3> Catch Phrase </h3>
+            <p> {{this.catchPhrase}} </p>
+    {{/each}}
+</div>
