@@ -6,11 +6,6 @@ const Celebrity = require('../models/celebrity')
   router.get('/', (req, res, next) => {
     res.render('index');
   });
-        // RAW CALL: calls celeb data from database
-        // Celebrity.find()
-        // .then(res => 
-        //   {console.log('from res', res)
-        // })
 
 // rendering the celebrities page:
       // the call for the celebrities is done in this rendering function.
@@ -25,6 +20,11 @@ const Celebrity = require('../models/celebrity')
           })
       })
       // how do I use the next in this instance to catch error?
+    // RAW CALL: calls celeb data from database
+        // Celebrity.find()
+        // .then(res => 
+        //   {console.log('from res', res)
+        // })
 
 
 // ARTIST PAGE:
@@ -51,6 +51,18 @@ const Celebrity = require('../models/celebrity')
           console.log(error, "not working");
         })
       })
+
+  // EDIT artist:
+  // Data passed as query string
+      router.get('/celebrities/edit', (req, res, next) => {
+        Celebrity.findOne({_id: req.query.celeb_id})
+        .then((celeb) => {
+          res.render('editCeleb', {celeb})
+          }) 
+        .catch((error) => {
+            console.log(error);
+          })
+        });
 
       // This works to get the query by ID, but the link to the route must also have the ID.
         // router.get('/celebrities/:id', (req, res, next) => {

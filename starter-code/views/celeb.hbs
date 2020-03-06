@@ -3,6 +3,7 @@
     <br>
 <h3><a href="/celebrities"> Celebrities List </a></h3>
     <br>
+
 <h1> This is the  {{celeb.name}} page </h1>
 
 <div> 
@@ -12,26 +13,24 @@
         <h4> 
         {{celeb.name}} is an incredible {{celeb.occupation}}.
         </h4>
-        <br>
 
     </div>
 
     <div>
-
-            <br>
-            {{celeb.name}} loves to pull out his signature phrase:
-            <br>
-        <h4>
-        <strong> {{celeb.catchPhrase}} </strong>  
+        <br>
+        {{celeb.name}} loves to pull out his signature phrase:
+        <br>
+        <h4> <strong> {{celeb.catchPhrase}} </strong>  
         </h4>
     </div>
 
 </div>
 
 <div>
-    
+    <h3> <a href="/celebrities/edit?celeb_id={{celeb._id}}"> EDIT CELEBRITY </a> </h3>
+
     <form action='/celebrities/each/{{celeb.name}}/delete' method="post" >    
         <h4> <strong> <button type="submit" > DELETE </button> </strong> </h4>
-        </form> 
-    </div>
+    </form> 
+</div>
 
