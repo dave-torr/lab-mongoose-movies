@@ -1,0 +1,31 @@
+<h3><a href="/"> Home </a></h3> 
+    <br>
+<h3><a href="/celebrities"> Celebrities List </a></h3>
+    <br>
+
+{{!-- action="/books/add" method="post" --}}
+<form action="/celebrities/new" method="post" >
+  <label for="">Name:</label>
+  <br>
+  <input type="text" name="name">
+  <br>
+
+  <label for="">Occupation:</label>
+    <br>
+
+    <select name="occupation" >
+      <option name="Actor" value="Actor">Actor</option>
+      <option name="Singer" value="Singer">Singer</option>
+      <option name="Comedian" value="Comedian">Comedian</option>
+      <option name="unknown" value="unknown">Unknown</option>
+    </select>
+  <br>
+
+  <label for="">Catch Phrase:</label>
+    <br>
+
+  <input type="text" name="catchPhrase">
+  <br>
+
+  <button type="submit">ADD</button>
+</form>

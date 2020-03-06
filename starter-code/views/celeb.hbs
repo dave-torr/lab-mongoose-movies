@@ -6,25 +6,32 @@
 <h1> This is the  {{celeb.name}} page </h1>
 
 <div> 
-<div>
+    <div>
         <br>
         <br>
         <h4> 
-        {{celeb.name}} is an incredible {{celeb.occupation}} from Ecuador.
+        {{celeb.name}} is an incredible {{celeb.occupation}}.
         </h4>
         <br>
 
-        </div>
+    </div>
 
-<div>
+    <div>
 
-        <br>
-        {{celeb.name}} loves to pull out his signature phrase:
-        <br>
-    <h4>
-    <strong> {{celeb.catchPhrase}} </strong>  
-    </h4>
+            <br>
+            {{celeb.name}} loves to pull out his signature phrase:
+            <br>
+        <h4>
+        <strong> {{celeb.catchPhrase}} </strong>  
+        </h4>
     </div>
 
 </div>
+
+<div>
+    
+    <form action='/celebrities/each/{{celeb.name}}/delete' method="post" >    
+        <h4> <strong> <button type="submit" > DELETE </button> </strong> </h4>
+        </form> 
+    </div>
 
